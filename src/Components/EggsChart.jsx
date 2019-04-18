@@ -19,6 +19,7 @@ class EggsChart extends Component {
             });
     }
     render() {
+        const random = Math.floor(Math.random() * 10)
         const theArray = [];
         const datas = this.state.chocolateTrading.map((data, i) => {
             return theArray.push(parseInt(data.price, 10));
@@ -27,6 +28,8 @@ class EggsChart extends Component {
         const options = {
             series: [
                 {
+                    type: "area",
+                    colorIndex : random,
                     data: theArray,
                     turboThresold: 0
                 }
