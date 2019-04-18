@@ -1,6 +1,10 @@
 import React from "react";
 import Navbar from "./Components/TheNavBar.jsx";
+<<<<<<< HEAD
 import Particle from "./Components/Particle";
+=======
+import Particle from './Components/Particle'
+>>>>>>> b0d7222e65710e44ad27022d4bd7a9710eb94ad5
 
 const ResponsiveLayout = ({ children }) => {
    let getItems = () => {
