@@ -12,7 +12,7 @@ class Particle extends Component {
                      value: 70,
                      density: {
                         enable: true,
-                        value_area: 800
+                        value_area: 400
                      }
                   },
                   color: {
@@ -43,23 +43,23 @@ class Particle extends Component {
                      random: true,
                      anim: {
                         enable: false,
-                        speed: 40,
+                        speed: 60,
                         size_min: 0.1,
                         sync: false
                      }
                   },
                   line_linked: {
                      enable: true,
-                     distance: 200,
+                     distance: 150,
                      color: "#000",
                      opacity: 0.4,
                      width: 2
                   },
                   move: {
                      enable: true,
-                     speed: 12,
+                     speed: 4,
                      direction: "none",
-                     random: false,
+                     random: true,
                      straight: false,
                      out_mode: "out",
                      bounce: false,
@@ -98,7 +98,7 @@ class Particle extends Component {
                         speed: 3
                      },
                      repulse: {
-                        distance: 100,
+                        distance: 75,
                         duration: 0.4
                      },
                      push: {
