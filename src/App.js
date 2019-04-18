@@ -1,12 +1,13 @@
 import React, { Component } from "react";
 import ResponsiveLayout from "./Responsive.layout";
+import Particles from "react-particles-js";
 
 class App extends Component {
    render() {
       return (
          <div className="App">
             {/* TODO: Add the router, then move the Layout */}
-            <ResponsiveLayout />
+            <ResponsiveLayout>ind</ResponsiveLayout>
          </div>
       );
    }

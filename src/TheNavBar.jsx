@@ -20,12 +20,12 @@ export default class TheNavbar extends React.Component {
    render() {
       return (
          <div>
-            <Navbar color="light" light expand="md">
+            <Navbar color="dark" dark expand="md">
                <NavbarBrand href="/">Easter Charts</NavbarBrand>
                <NavbarToggler onClick={this.toggle} />
                <Collapse isOpen={this.state.isOpen} navbar>
                   <Nav className="ml-auto" navbar>
-                     {this.state.navItems.map((items, i) => {
+                     {/* {this.state.navItems.map((items, i) => {
                         return (
                            <NavItem key={i}>
                               <NavLink tag={Link} to={items.to}>
@@ -33,7 +33,7 @@ export default class TheNavbar extends React.Component {
                               </NavLink>
                            </NavItem>
                         );
-                     })}
+                     })} */}
                   </Nav>
                </Collapse>
             </Navbar>
