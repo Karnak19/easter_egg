@@ -1,11 +1,9 @@
 import React from "react";
 import { Row } from "reactstrap";
-
 import ResponsiveLayout from "../Responsive.layout";
 import BitcoinChart from "../Components/BtcChart";
-import Axios from "axios";
 
-class Chocolate extends React.Component {
+class Btc extends React.Component {
    constructor(props) {
       super(props);
       this.state = {};
@@ -24,4 +22,4 @@ class Chocolate extends React.Component {
    }
 }
 
-export default Chocolate;
+export default Btc;
