@@ -19,6 +19,7 @@ class ChocolateChart extends Component {
       });
    }
    render() {
+      const random = Math.floor(Math.random() * 10)
       const theArray = [];
       const datas = this.state.chocolateTrading.map((data, i) => {
          return theArray.push(parseInt(data.price, 10));
@@ -28,7 +29,7 @@ class ChocolateChart extends Component {
          series: [
             {
                type: "area",
-               colorIndex: 3,
+               colorIndex: random,
                data: theArray,
                threshold: 10,
                turboThresold: 0
