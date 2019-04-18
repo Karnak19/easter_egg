@@ -1,5 +1,5 @@
 import React from 'react'
-import ResponsiveLayout from './Responsive.layout';
+import ResponsiveLayout from '../Responsive.layout';
 
 const Home = () =>{
     return(

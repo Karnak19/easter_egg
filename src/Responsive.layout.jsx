@@ -1,6 +1,6 @@
 import React from "react";
 import Navbar from "./Components/TheNavBar.jsx";
-// import RouterEaster from './Router.jsx'
+import Particle from './Components/Particle'
 
 const ResponsiveLayout = ({ children }) => {
    let getItems = () => {
@@ -8,6 +8,7 @@ const ResponsiveLayout = ({ children }) => {
    };
    return (
       <>
+         <Particle />
          <Navbar items={getItems} />
          <div className="container-fluid">{children}</div>
          {/* TODO: Add a footer here */}
