@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import Highcharts from "highcharts";
 import HighchartsReact from "highcharts-react-official";
 import Axios from "axios";
+import { Row, Col } from "reactstrap";
 
 class ChocolateChart extends Component {
    constructor(props) {
@@ -11,7 +12,7 @@ class ChocolateChart extends Component {
       };
    }
    componentDidMount() {
-      Axios.get("http://easteregg.wildcodeschool.fr/api/stocks/chocolates?min=1555596705").then(res => {
+      Axios.get("http://easteregg.wildcodeschool.fr/api/stocks/chocolates?min=1555596705&interval=10000").then(res => {
          this.setState({
             chocolateTrading: res.data
          });
@@ -26,16 +27,21 @@ class ChocolateChart extends Component {
       const options = {
          series: [
             {
+               type: "area",
+               colorIndex: 3,
                data: theArray,
+               threshold: 10,
                turboThresold: 0
             }
          ]
       };
 
       return (
-         <div>
-            <HighchartsReact highcharts={Highcharts} options={options} />
-         </div>
+         <Row>
+            <Col lg={{ size: 10, offset: 1 }}>
+               <HighchartsReact highcharts={Highcharts} options={options} />
+            </Col>
+         </Row>
       );
    }
 }

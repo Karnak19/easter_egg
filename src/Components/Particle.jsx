@@ -16,7 +16,7 @@ class Particle extends Component {
                      }
                   },
                   color: {
-                     value: "#000"
+                     value: "#fff"
                   },
                   shape: {
                      type: "circle",
@@ -51,7 +51,7 @@ class Particle extends Component {
                   line_linked: {
                      enable: true,
                      distance: 150,
-                     color: "#000",
+                     color: "#fff",
                      opacity: 0.4,
                      width: 2
                   },
@@ -113,7 +113,7 @@ class Particle extends Component {
             }}
             style={{
                width: "100%",
-               background: "linear-gradient(to left, rgb(9, 89, 191 ),rgba(142, 134, 134, 0.6), rgb(9, 89, 191))"
+               background: "linear-gradient(to left, rgb(9, 89, 191 ), rgb(9, 89, 191))"
             }}
          />
       );
