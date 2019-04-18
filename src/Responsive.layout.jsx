@@ -4,7 +4,7 @@ import Particle from "./Components/Particle";
 
 const ResponsiveLayout = ({ children }) => {
    let getItems = () => {
-      return [{ label: "Chocolate", to: "/chocolate" }, { label: "Eggs", to: "/eggs" }, { label: "Milk", to: "/milk" }];
+      return [{ label: "CHOCOLATE", to: "/chocolate" }, { label: "EGGS", to: "/eggs" }, { label: "MILK", to: "/milk" }, ];
    };
    return (
       <>
