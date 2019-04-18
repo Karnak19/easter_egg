@@ -9,7 +9,7 @@ class Eggs extends React.Component {
    render() {
       return (
          <ResponsiveLayout>
-            <div>Hello eggs</div>;
+            <div>Hello eggs</div>
          </ResponsiveLayout>
       );
    }

@@ -21,7 +21,7 @@ export default class TheNavbar extends React.Component {
       return (
          <div>
             <Navbar color="dark" dark expand="md">
-               <NavbarBrand href="/">Easter Charts</NavbarBrand>
+               <NavbarBrand tag={Link} to={'/'}>Home</NavbarBrand>
                <NavbarToggler onClick={this.toggle} />
                <Collapse isOpen={this.state.isOpen} navbar>
                   <Nav className="ml-auto" navbar>
