@@ -1,13 +1,13 @@
-import React, { Component } from 'react';
+import React, {Component} from 'react'
+import Particle from './Components/Particle'
 
 class App extends Component {
-  render() {
-    return (
-      <div className="App">
-  
-      </div>
-    );
-  }
+    state = {  }
+    render() { 
+        return ( 
+            <Particle />
+         );
+    }
 }
-
+ 
 export default App;
