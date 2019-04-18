@@ -1,19 +1,13 @@
 import React, { Component } from "react";
-import ResponsiveLayout from "./Components/Responsive.layout";
-import Particle from "./Components/Particle";
 import "./App.css";
-import ChocolatePage from "./Chocolate.page";
+import RouterEaster from './Components/Router'
 
 class App extends Component {
    render() {
       return (
          <div className="App">
             {/* TODO: Add the router, then move the Layout */}
-            <ResponsiveLayout>
-               <Particle />
-               <ChocolatePage />
-               ind
-            </ResponsiveLayout>
+         <RouterEaster />
          </div>
       );
    }
