@@ -1,5 +1,6 @@
 import React from "react";
 import ResponsiveLayout from "../Responsive.layout";
+import ChocolateChart from "./ChocolateChart";
 
 class Chocolate extends React.Component {
    constructor(props) {
@@ -10,6 +11,7 @@ class Chocolate extends React.Component {
       return (
          <ResponsiveLayout>
             <div>Hello chocolate</div>
+            <ChocolateChart />
          </ResponsiveLayout>
       );
    }
