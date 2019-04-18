@@ -37,11 +37,9 @@ class ChocolateChart extends Component {
       };
 
       return (
-         <Row>
-            <Col lg={{ size: 10, offset: 1 }}>
-               <HighchartsReact highcharts={Highcharts} options={options} />
-            </Col>
-         </Row>
+         <Col lg={{ size: 10, offset: 1 }}>
+            <HighchartsReact highcharts={Highcharts} options={options} />
+         </Col>
       );
    }
 }

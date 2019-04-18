@@ -1,4 +1,6 @@
 import React from "react";
+import { Row } from "reactstrap";
+
 import ResponsiveLayout from "../Responsive.layout";
 import ChocolateChart from "./ChocolateChart";
 
@@ -10,7 +12,9 @@ class Chocolate extends React.Component {
    render() {
       return (
          <ResponsiveLayout>
-            <ChocolateChart />
+            <Row>
+               <ChocolateChart />
+            </Row>
          </ResponsiveLayout>
       );
    }
