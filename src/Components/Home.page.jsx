@@ -4,7 +4,6 @@ import ResponsiveLayout from "../Responsive.layout";
 const Home = () => {
    return (
       <ResponsiveLayout>
-         <div>Hello world</div>
       </ResponsiveLayout>
    );
 };
