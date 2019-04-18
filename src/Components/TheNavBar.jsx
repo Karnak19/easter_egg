@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { BrowserRouter as Link } from "react-router-dom";
 import { Collapse, Navbar, NavbarToggler, NavbarBrand, Nav, NavItem, NavLink } from "reactstrap";
 
 export default class TheNavbar extends React.Component {
@@ -25,7 +25,8 @@ export default class TheNavbar extends React.Component {
                <NavbarToggler onClick={this.toggle} />
                <Collapse isOpen={this.state.isOpen} navbar>
                   <Nav className="ml-auto" navbar>
-                     {this.state.navItems.map((items, i) => {
+               
+                     {/* {this.state.navItems.map((items, i) => {
                         return (
                            <NavItem key={i}>
                               <NavLink tag={Link} to={items.to}>
@@ -33,7 +34,7 @@ export default class TheNavbar extends React.Component {
                               </NavLink>
                            </NavItem>
                         );
-                     })}
+                     })} */}
                   </Nav>
                </Collapse>
             </Navbar>

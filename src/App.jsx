@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import ResponsiveLayout from "./Responsive.layout";
+import ResponsiveLayout from "./Components/Responsive.layout";
 import Particle from './Components/Particle'
 
 
