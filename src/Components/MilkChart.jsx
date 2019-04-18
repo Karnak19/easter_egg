@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import Highcharts from "highcharts";
 import HighchartsReact from "highcharts-react-official";
 import Axios from "axios";
+import { Col } from "reactstrap";
 
 class MilkChart extends Component {
    constructor(props) {
@@ -11,8 +12,7 @@ class MilkChart extends Component {
       };
    }
    componentDidMount() {
-      Axios.get("http://easteregg.wildcodeschool.fr/api/stocks/milks?min=1555599843")
-      .then(res => {
+      Axios.get("http://easteregg.wildcodeschool.fr/api/stocks/milks?min=1555599843").then(res => {
          this.setState({
             chocolateTrading: res.data
          });
@@ -34,9 +34,9 @@ class MilkChart extends Component {
       };
 
       return (
-         <div>
+         <Col lg={{ size: 10, offset: 1 }}>
             <HighchartsReact highcharts={Highcharts} options={options} />
-         </div>
+         </Col>
       );
    }
 }

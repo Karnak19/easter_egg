@@ -1,9 +1,9 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import Chocolate from "./Components/Chocolate.page";
-import Eggs from "./Components/Eggs.page";
-import Milk from "./Components/Milk.page";
-import Home from "./Components/Home.page";
+import Chocolate from "./pages/Chocolate.page";
+import Eggs from "./pages/Eggs.page";
+import Milk from "./pages/Milk.page";
+import Home from "./pages/Home.page";
 
 const RouterEaster = () => {
    return (

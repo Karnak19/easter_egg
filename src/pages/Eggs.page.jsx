@@ -2,9 +2,9 @@ import React from "react";
 import { Row } from "reactstrap";
 
 import ResponsiveLayout from "../Responsive.layout";
-import ChocolateChart from "./ChocolateChart";
+import EggsChart from "../Components/EggsChart";
 
-class Chocolate extends React.Component {
+class Eggs extends React.Component {
    constructor(props) {
       super(props);
       this.state = {};
@@ -13,11 +13,11 @@ class Chocolate extends React.Component {
       return (
          <ResponsiveLayout>
             <Row>
-               <ChocolateChart />
+               <EggsChart />
             </Row>
          </ResponsiveLayout>
       );
    }
 }
 
-export default Chocolate;
+export default Eggs;

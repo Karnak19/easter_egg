@@ -2,7 +2,7 @@ import React from "react";
 import { Row } from "reactstrap";
 
 import ResponsiveLayout from "../Responsive.layout";
-import MilkChart from "./MilkChart";
+import MilkChart from "../Components/MilkChart";
 
 class Milk extends React.Component {
    constructor(props) {
