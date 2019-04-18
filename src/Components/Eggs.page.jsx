@@ -1,5 +1,6 @@
 import React from "react";
 import ResponsiveLayout from "../Responsive.layout";
+import EggsChart from './EggsChart'
 
 class Eggs extends React.Component {
    constructor(props) {
@@ -9,7 +10,7 @@ class Eggs extends React.Component {
    render() {
       return (
          <ResponsiveLayout>
-            <div>Hello eggs</div>
+            <EggsChart />
          </ResponsiveLayout>
       );
    }

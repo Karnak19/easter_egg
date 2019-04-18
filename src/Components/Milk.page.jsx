@@ -1,5 +1,7 @@
 import React from "react";
 import ResponsiveLayout from "../Responsive.layout";
+import MilkChart from './MilkChart'
+
 
 class Milk extends React.Component {
    constructor(props) {
@@ -9,7 +11,7 @@ class Milk extends React.Component {
    render() {
       return (
          <ResponsiveLayout>
-            <div>Hello milk</div>
+            <MilkChart />
          </ResponsiveLayout>
       );
    }
