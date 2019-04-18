@@ -13,6 +13,7 @@ class Milk extends React.Component {
       return (
          <ResponsiveLayout>
             <Row>
+               <h1>Milk Chart</h1>
                <MilkChart />
             </Row>
          </ResponsiveLayout>

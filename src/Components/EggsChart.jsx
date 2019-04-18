@@ -26,11 +26,43 @@ class EggsChart extends Component {
       });
 
       const options = {
+         chart: {
+            type: "line",
+            backgroundColor: "#343a40",
+            zoomType: "x"
+         },
+         title: {
+            text: "",
+            style: {
+               color: "#FFF",
+               font: '16px "Trebuchet MS", Verdana, sans-serif'
+            }
+         },
+         xAxis: {
+            categories: [],
+
+            labels: {
+               style: {
+                  color: "#FFF",
+                  font: "11px Trebuchet MS, Verdana, sans-serif"
+               }
+            }
+         },
+         yAxis: {
+            categories: [],
+            label: {
+               style: {
+                  color: "#FFF",
+                  font: "11px Trebucher MS, Verdana, sans-serif"
+               }
+            }
+         },
          series: [
             {
                type: "area",
                colorIndex: random,
                data: theArray,
+               threshold: 0,
                turboThresold: 0
             }
          ]

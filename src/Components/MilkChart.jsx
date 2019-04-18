@@ -20,17 +20,49 @@ class MilkChart extends Component {
    }
    render() {
       const random = Math.floor(Math.random() * 10);
+      const random2 = Math.floor(Math.random() * 10);
       const theArray = [];
       const datas = this.state.chocolateTrading.map((data, i) => {
          return theArray.push(parseInt(data.price, 10));
       });
 
       const options = {
+         chart: {
+            backgroundColor: "#343a40",
+            zoomType: "x"
+         },
+         title: {
+            text: "",
+            style: {
+               color: "#FFF",
+               font: '16px "Trebuchet MS", Verdana, sans-serif'
+            }
+         },
+         xAxis: {
+            categories: [],
+
+            labels: {
+               style: {
+                  color: "#FFF",
+                  font: "11px Trebuchet MS, Verdana, sans-serif"
+               }
+            }
+         },
+         yAxis: {
+            categories: [],
+            label: {
+               style: {
+                  color: "#FFF",
+                  font: "11px Trebucher MS, Verdana, sans-serif"
+               }
+            }
+         },
          series: [
             {
                type: "area",
                colorIndex: random,
                data: theArray,
+               threshold: 20,
                turboThresold: 0
             }
          ]

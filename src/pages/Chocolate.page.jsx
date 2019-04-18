@@ -13,6 +13,8 @@ class Chocolate extends React.Component {
       return (
          <ResponsiveLayout>
             <Row>
+               <h1>Chocolate Chart</h1>
+
                <ChocolateChart />
             </Row>
          </ResponsiveLayout>

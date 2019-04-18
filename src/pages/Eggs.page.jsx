@@ -13,6 +13,10 @@ class Eggs extends React.Component {
       return (
          <ResponsiveLayout>
             <Row>
+               <div>
+                  <h1>Eggs Chart</h1>
+               </div>
+
                <EggsChart />
             </Row>
          </ResponsiveLayout>
