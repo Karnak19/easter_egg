@@ -1,25 +1,24 @@
-import React from "react";
+import React, { Component } from "react";
 import { Row } from "reactstrap";
-import ResponsiveLayout from "../Responsive.layout";
-import BitcoinChart from "../Components/BtcChart";
 
-class Btc extends React.Component {
+import ResponsiveLayout from "../Responsive.layout";
+import MemoryGame from "../Components/MemoryGame";
+
+class Memory extends Component {
    constructor(props) {
       super(props);
       this.state = {};
    }
-
    render() {
       return (
          <ResponsiveLayout>
             <Row>
-               <h1>Bitcoin Chart</h1>
-
-               <BitcoinChart />
+               <h1>Memory game here</h1>
+               <MemoryGame />
             </Row>
          </ResponsiveLayout>
       );
    }
 }
 
-export default Btc;
+export default Memory;
