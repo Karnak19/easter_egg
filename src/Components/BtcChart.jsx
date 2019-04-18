@@ -12,7 +12,7 @@ class EggsChart extends Component {
       };
    }
    componentDidMount() {
-      Axios.get("https://api.coindesk.com/v1/bpi/historical/close.json?start=2019-03-01&end=2019-03-31").then(res => {
+      Axios.get("https://api.coindesk.com/v1/bpi/historical/close.json?start=2018-03-01&end=2019-03-31").then(res => {
          this.setState({
             bitcoinTrading: res.data.bpi
          });
@@ -45,7 +45,7 @@ class EggsChart extends Component {
             }
          },
          xAxis: {
-            categories: datasDates,
+            categories: theArrayDate,
 
             labels: {
                style: {
@@ -69,7 +69,7 @@ class EggsChart extends Component {
                type: "area",
                colorIndex: random,
                data: theArrayDollar,
-               threshold: 3500,
+               threshold: 0,
                turboThresold: 0
             }
          ]
