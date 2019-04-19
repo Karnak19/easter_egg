@@ -12,7 +12,7 @@ class Milk extends React.Component {
    render() {
       return (
          <ResponsiveLayout>
-            <Row>
+            <Row style={{ justifyContent: "center" }}>
                <h1>Milk Chart</h1>
                <MilkChart />
             </Row>

@@ -1,7 +1,15 @@
+@font-face {
+   font-family: champagne;
+   src: url("Champagne.ttf");
+}
+
 body {
+   font-family: champagne;
+   font-weight: bold;
    margin: 0;
    padding: 0;
-   /* more styles */
+   text-transform: uppercase;
+   height: 100vh;
 }
 .particles {
    position: fixed;

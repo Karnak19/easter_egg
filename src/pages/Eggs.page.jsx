@@ -12,7 +12,7 @@ class Eggs extends React.Component {
    render() {
       return (
          <ResponsiveLayout>
-            <Row>
+            <Row style={{ justifyContent: "center" }}>
                <div>
                   <h1>Eggs Chart</h1>
                </div>

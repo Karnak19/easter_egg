@@ -13,7 +13,7 @@ class Btc extends React.Component {
    render() {
       return (
          <ResponsiveLayout>
-            <Row>
+            <Row style={{ justifyContent: "center" }}>
                <h1>Ethereum Chart</h1>
 
                <EthereumChart />

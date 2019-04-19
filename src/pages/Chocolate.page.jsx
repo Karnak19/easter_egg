@@ -12,7 +12,7 @@ class Chocolate extends React.Component {
    render() {
       return (
          <ResponsiveLayout>
-            <Row>
+            <Row style={{ justifyContent: "center" }}>
                <h1>Chocolate Chart</h1>
 
                <ChocolateChart />
