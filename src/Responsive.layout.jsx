@@ -9,9 +9,7 @@ const ResponsiveLayout = ({ children }) => {
          { label: "CHOCOLATE", to: "/chocolate" },
          { label: "EGGS", to: "/eggs" },
          { label: "MILK", to: "/milk" },
-         { label: "BTC", to: "/btc" },
-         { label: "ETH", to: "/eth" },
-         { label: "TRX", to: "/trx" }
+         { label: "BTC", to: "/btc" }
       ];
    };
    let FootItems = () => {
