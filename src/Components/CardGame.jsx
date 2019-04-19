@@ -13,8 +13,8 @@ const CardGame = React.memo(
                <CardImgOverlay />
             </Card>
 
-            <Card style={{ opacity: !egg.isFlipped ? "0" : "1" }} className={styles.isFlipped}>
-               <CardImg src={egg.raw.image} alt="Card image cap" />
+            <Card style={{ opacity: !egg.isFlipped ? "0" : "1", height: "100%", width: "80%" }} className={styles.isFlipped}>
+               <CardImg src={egg.raw.image} alt="Card image cap" style={{ height: "100%" }} />
                <CardImgOverlay />
             </Card>
          </Col>
