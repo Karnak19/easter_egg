@@ -1,10 +1,10 @@
-import React from "react";
-import ResponsiveLayoutBtc from "../Responsive.layout.btc";
+import React from "react"
+import ResponsiveLayout from "../Responsive.layout";
 
 const SecondHome = () => {
    return (
-      <ResponsiveLayoutBtc>
-      </ResponsiveLayoutBtc>
+      <ResponsiveLayout>
+      </ResponsiveLayout>
    );
 };
 

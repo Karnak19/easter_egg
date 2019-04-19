@@ -10,7 +10,6 @@ export default class TheNavbar extends React.Component {
       this.state = {
          isOpen: false,
          navItems: this.props.items(),
-         switch : true
       };
    }
    toggle() {
@@ -26,7 +25,6 @@ export default class TheNavbar extends React.Component {
          <div>
             <Navbar color="dark" dark expand="md">
                <NavbarBrand tag={Link} to={'/'}>Home</NavbarBrand>
-               <NavbarBrand tag={Link} to={'/secondHome'}>{this.state.switch}Switch</NavbarBrand>
                <NavbarToggler onClick={this.toggle} />
                <Collapse isOpen={this.state.isOpen} navbar>
                   <Nav className="ml-auto" navbar>

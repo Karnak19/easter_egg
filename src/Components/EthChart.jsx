@@ -4,7 +4,7 @@ import HighchartsReact from "highcharts-react-official";
 import Axios from "axios";
 import { Col } from "reactstrap";
 
-class BitcoinChart extends Component {
+class EthereumChart extends Component {
    constructor(props) {
       super(props);
       this.state = {
@@ -12,9 +12,10 @@ class BitcoinChart extends Component {
       };
    }
    componentDidMount() {
-      Axios.get("https://api.coindesk.com/v1/bpi/historical/close.json?start=2010-08-01&end=2019-04-16").then(res => {
+      Axios.get("/getTokenInfo/0xe94327d07fc17907b4db788e5adf2ed424addff6?apiKey=freekey")
+      .then(res => {
          this.setState({
-            bitcoinTrading: res.data.bpi
+            bitcoinTrading: res.data.price.rate
          });
       });
    }
@@ -83,4 +84,4 @@ class BitcoinChart extends Component {
    }
 }
 
-export default BitcoinChart;
+export default EthereumChart;
