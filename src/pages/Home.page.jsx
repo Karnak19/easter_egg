@@ -7,7 +7,7 @@ import ResponsiveLayout from "../Responsive.layout";
 const Home = () => {
    return (
       <ResponsiveLayout>
-         <Row style={{ marginTop: 250 }}>
+         <Row style={{ marginTop: 250, marginBottom: 250 }}>
             <Col lg={{ size: 6, offset: 3 }}>
                <Button tag={Link} to="/chocolate" color="warning" size="lg" block>
                   Cours du chocolat
