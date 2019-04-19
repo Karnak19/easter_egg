@@ -15,7 +15,7 @@ class EthereumChart extends Component {
       Axios.get("/getTokenInfo/0xe94327d07fc17907b4db788e5adf2ed424addff6?apiKey=freekey")
       .then(res => {
          this.setState({
-            bitcoinTrading: res.data
+            bitcoinTrading: res.data.price.rate
          });
       });
    }

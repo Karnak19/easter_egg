@@ -9,7 +9,6 @@ class App extends Component {
       <div className="App">
         {/* TODO: Add the router, then move the Layout */}
         <RouterEaster />
-        <Memo />
       </div>
     );
   }

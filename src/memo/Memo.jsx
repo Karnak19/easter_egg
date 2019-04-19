@@ -1,5 +1,6 @@
 import React, { useReducer, useEffect } from "react";
 import axios from "axios";
+import GameMemo from '../Components/MemoryGame'
 
 /**
  * @see https://www.frankmitchell.org/2015/01/fisher-yates/
@@ -20,11 +21,11 @@ function shuffle(array) {
   return res;
 }
 
-function createEgg(egg, isCopy = false) {
+function createEgg(egg, isCopy = false, index = 0) {
   return {
     raw: egg,
     isFlipped: false,
-    id: isCopy ? "COPY-FROM:" + egg.id : egg.id
+    id: isCopy ? index + "COPY-FROM:" + egg.id : egg.id
   };
 }
 
@@ -42,28 +43,14 @@ function unflipEgg(egg) {
   };
 }
 
-// function isEggCopy(egg) {
-//   return egg.id.includes("COPY-FROM:");
-// }
-
 const initialState = {
   eggs: [],
   firstEggId: null,
-  secondEggId: null
-};
-
-const isTwinsFlippedSelector = eggId => state => {
-  let id = state.eggs.find(egg => egg.id === eggId).raw.id;
-  let twins = state.eggs.filter(egg => egg.raw.id === id);
-  return twins[0].isFlipped && twins[1].isFlipped;
-};
-
-const isEggFlippedSelector = eggId => state => {
-  return state.eggs.find(egg => egg.id === eggId).isFlipped;
+  secondEggId: null,
 };
 
 const eggByIdSelector = eggId => state => {
-  return state.find(egg => egg.id === eggId);
+  return state.eggs.find(egg => egg.id === eggId);
 };
 
 function reducer(state, action) {
@@ -84,11 +71,19 @@ function reducer(state, action) {
       return {
         ...state,
         eggs: state.eggs.map(egg =>
-          !firstEggId && !secondEggId && egg.id === eggId ? flipEgg(egg) : egg
+          ((!firstEggId && !secondEggId) || (firstEggId && !secondEggId)) && egg.id === eggId ? flipEgg(egg) : egg
         ),
         firstEggId: firstEggId ? firstEggId : eggId,
-        secondEggId: !firstEggId ? null : secondEggId ? secondEggId : eggId
+        secondEggId: !firstEggId ? null : secondEggId ? secondEggId : eggId,
       };
+    }
+
+    case "free": {
+      return {
+        ...state,
+        firstEggId: null,
+        secondEggId: null
+      }
     }
 
     case "fetch_egg_success": {
@@ -97,8 +92,8 @@ function reducer(state, action) {
         ...state,
         eggs: shuffle(
           eggs
-            .map(egg => createEgg(egg, false))
-            .concat(eggs.map(egg => createEgg(egg, true)))
+            .map((egg,i) => createEgg(egg, false, i))
+            .concat(eggs.map((egg,i) => createEgg(egg, true, i)))
         )
       };
     }
@@ -109,9 +104,9 @@ function reducer(state, action) {
 
 export default function Memorize() {
   const [state, dispatch] = useReducer(reducer, initialState);
-  useEffect(function() {
+  useEffect(function () {
     Promise.all(
-      Array.from(new Array(10)).map(() =>
+      Array.from(new Array(12)).map(() =>
         axios
           .get("http://easteregg.wildcodeschool.fr/api/eggs/random")
           .then(res => res.data)
@@ -129,19 +124,19 @@ export default function Memorize() {
     if (firstEggId && !secondEggId) {
       setTimeout(() => {
         if (
-          eggByIdSelector(firstEggId).raw.id !== eggByIdSelector(eggId).raw.id
+          eggByIdSelector(firstEggId)(state).raw.image !== eggByIdSelector(eggId)(state).raw.image
         ) {
           dispatch({ type: "unflip" });
+        } else {
+          dispatch({ type: 'free' });
         }
-      }, 750);
+      }, 1000);
     }
     return dispatch({ type: "flip", payload: eggId });
   }
   return (
     <div>
-      {state.eggs.map(({ raw: egg }) => (
-        <img alt="lol" src={egg.image} height="20px" width="20px" />
-      ))}
+      <GameMemo eggs={state.eggs} toggle={toggle} isLoading={state.firstEggId && state.secondEggId} />
     </div>
   );
 }
