@@ -106,7 +106,7 @@ export default function Memorize() {
   const [state, dispatch] = useReducer(reducer, initialState);
   useEffect(function () {
     Promise.all(
-      Array.from(new Array(12)).map(() =>
+      Array.from(new Array(2)).map(() =>
         axios
           .get("http://easteregg.wildcodeschool.fr/api/eggs/random")
           .then(res => res.data)
