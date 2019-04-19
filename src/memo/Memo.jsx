@@ -25,7 +25,7 @@ function createEgg(egg, isCopy = false, index = 0) {
   return {
     raw: egg,
     isFlipped: false,
-    id: isCopy ? index + "COPY-FROM:" + egg.id : egg.id
+    id: index + (isCopy ? "COPY-FROM:" + egg.id : egg.id)
   };
 }
 
