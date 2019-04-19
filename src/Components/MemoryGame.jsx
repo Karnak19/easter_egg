@@ -9,11 +9,8 @@ const GameMemo = ({ eggs, toggle, isLoading }) => {
       return (
          <div>
             <h1>
-               Congrats you resolved the first part of the test : Download here the application, if you solve the next enigma
-               you'll get the private key to open the treasure
+               Congrats
             </h1>
-            >
-            <img src={Reward} width="500px" />
          </div>
       );
    }
