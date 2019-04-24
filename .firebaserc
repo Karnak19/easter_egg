@@ -1,0 +1,10 @@
+{
+  "projects": {
+    "default": "easter-440b3",
+    "for easter-38977": "easter-38977",
+    "firebase-react-deploy": "easter-38977",
+    "no": "easter-38977",
+    "test": "easter-38977",
+    "d": "easter-38977"
+  }
+}
